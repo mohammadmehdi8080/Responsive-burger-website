@@ -60,6 +60,10 @@ a{
 button{
   border: none;
   outline: none;
+  cursor: pointer;
+  background-color: var(--first-color-alt);
+  padding: 1rem 1.5rem;
+  font-family: inherit;
 }
 svg{
   width: 3rem;
@@ -104,9 +108,9 @@ body{
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-/*.section {*/
-/*  padding-block: 5rem 1rem;*/
-/*}*/
+.section {
+  padding: 10rem 0;
+}
 
 .section__title {
   text-align: center;
@@ -176,7 +180,8 @@ body{
 /* Navigation for mobile devices */
 .menu__toggle{
   position: relative;
-  z-index: 50;
+  z-index: 250;
+  cursor: pointer;
   transition: all 300ms ease-in-out;
 }
 .menu__toggle.open{
@@ -194,6 +199,7 @@ body{
   flex-direction: column;
   box-shadow: 0 0 10px rgb(0 0 0 / 40%);
   transition: all 300ms ease-in-out;
+  z-index: 200;
 }
 .mobile__menu.open{
   top: 0;
@@ -208,7 +214,94 @@ body{
 
 
 /*=============== HOME ===============*/
+.home{
 
+}
+.home__container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: baseline;
+  padding-top: 8rem;
+}
+.home__content{
+  position: relative;
+}
+.home__title{
+  font-size: 8rem;
+  color: var(--title-color);
+}
+.home__description{
+  margin: 8rem 0;
+  font-size: 1.8rem;
+  max-width: 33rem;
+  line-height: 2.5rem;
+  color: var(--text-color);
+}
+.home__content button{
+  display: inline-block;
+  justify-self: center;
+}
+.home__sticker{
+  position: absolute;
+  bottom: 2rem;
+}
+.home__sticker svg{
+  width: 6rem;
+}
+.home__images{
+  justify-items: center;
+  align-self: center;
+  position: relative;
+}
+.home-burger{
+  max-width: 450px;
+  position: relative;
+  z-index: 3;
+}
+.home-dish{
+  max-width: 500px;
+  margin-top: -5rem;
+}
+.home-lettuce-1{
+  width: clamp(36px, 6.5vw, 90px);
+  position: absolute;
+  top: 0;
+  right: calc(20% - 60px);
+}
+.home-lettuce-2{
+  width: clamp(36px, 6.5vw, 90px);
+  position: absolute;
+  bottom: 0;
+  left: calc(20% - 60px);
+}
+.home-potato-1{
+  width: clamp(36px, 6.5vw, 90px);
+  position: absolute;
+  top: 0;
+  left: calc(20% - 60px);
+}
+.home-potato-2{
+  width: clamp(36px, 6.5vw, 90px);
+  position: absolute;
+  bottom: 0;
+  right: calc(20% - 60px);
+}
+.home-tomato-1{
+  width: clamp(36px, 6.5vw, 90px);
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+.home-tomato-2{
+  width: clamp(36px, 6.5vw, 90px);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
 
 /*=============== BUTTON ===============*/
 
@@ -242,14 +335,45 @@ body{
 
 }
 @media screen and (max-width: 992px){
-
+  .home__container{
+    grid-template-columns: 1fr;
+    row-gap: 8rem;
+  }
+  .home__content{
+    text-align: center;
+  }
+  .home__description{
+    margin: 8rem auto;
+  }
 }
 @media screen and (max-width: 768px){
+  .home__images{
+    text-align: center;
+  }
+  .home-burger{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .home-dish{
+    width: 82%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 }
 @media screen and (max-width: 576px){
   .header__nav__menu{
     display: none;
+  }
+  .home__title{
+    font-size: 3.3rem;
+  }
+  .home__description{
+    font-size: 1.6rem;
+    margin: 7rem auto;
+  }
+  .home__sticker svg{
+    width: 3rem;
   }
 }
 @media screen and (min-width: 576px){
