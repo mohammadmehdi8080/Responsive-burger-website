@@ -114,7 +114,8 @@ body{
 
 .section__title {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  font-size: 6rem;
 }
 
 .flex{
@@ -122,7 +123,9 @@ body{
   justify-content: space-between;
   align-items: center;
 }
-
+.order{
+  order: 1;
+}
 /*=============== HEADER & NAV ===============*/
 .header{
 
@@ -303,11 +306,50 @@ body{
   z-index: 4;
 }
 
-/*=============== BUTTON ===============*/
-
-
 /*=============== RECIPE ===============*/
+.recipe{
+  margin-top: 12rem;
+}
+.recipe__container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+  justify-items: center;
+}
+.recipe__image{
 
+}
+.recipe__content{
+  width: 60%;
+  padding-top: 3rem;
+}
+.recipe__wrapper{
+  margin-bottom: 6rem;
+}
+.recipe__img{
+  width: 10rem;
+  background-color: var(--first-color-alt);
+  border-radius: 2rem;
+  height: 10rem;
+}
+.recipe__img img{
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+}
+.recipe__text{
+
+}
+.recipe__title{
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.recipe__description{
+  max-width: 11rem;
+  font-family: cursive;
+  font-size: 1.4rem;
+  line-height: 110%;
+}
 
 /*=============== POPULAR ===============*/
 
@@ -345,6 +387,19 @@ body{
   .home__description{
     margin: 8rem auto;
   }
+  .recipe__container{
+    grid-template-columns: 20vw 1fr;
+  }
+  .recipe__wrapper{
+    justify-content: space-evenly;
+  }
+  .recipe__content{
+    justify-self: end;
+  }
+  .recipe__image img{
+    max-width: 40rem;
+    width: 60vw;
+  }
 }
 @media screen and (max-width: 768px){
   .home__images{
@@ -359,14 +414,23 @@ body{
     margin-left: auto;
     margin-right: auto;
   }
-
+  .section__title{
+    font-size: 4rem;
+  }
+  .recipe__img ,.recipe__img img{
+    width: 10vw;
+    height: 10vw;
+  }
+  .recipe__container{
+    grid-template-columns: 0 1fr;
+  }
 }
 @media screen and (max-width: 576px){
   .header__nav__menu{
     display: none;
   }
   .home__title{
-    font-size: 3.3rem;
+    font-size: 4rem;
   }
   .home__description{
     font-size: 1.6rem;
@@ -374,6 +438,15 @@ body{
   }
   .home__sticker svg{
     width: 3rem;
+  }
+  .recipe__wrapper{
+    margin-bottom: 12vw;
+  }
+  .recipe__title{
+    font-size: 4vw;
+  }
+  .recipe__description{
+    font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 576px){
