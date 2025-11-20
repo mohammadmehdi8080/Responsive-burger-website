@@ -24,7 +24,6 @@ const sr = ScrollReveal({
     distance: "60px",
     duration: 500,
     delay: 300,
-    reset: true
 })
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
@@ -42,3 +41,4 @@ sr.reveal(".home-tomato-2" , { origin: 'top', distance: '120px', delay: 800, dur
 sr.reveal(".section__title" , { origin: 'top', distance: '120px', delay: 1000, duration: 2000 })
 sr.reveal(".recipe__image" , { origin: 'left', distance: '120px', delay: 1000, duration: 2000 })
 sr.reveal(".recipe__content" , { origin: 'right', distance: '120px', delay: 1000, duration: 2000 })
+sr.reveal(".popular__card" , { origin: 'top', distance: '120px', delay: 1000, duration: 2000 })
