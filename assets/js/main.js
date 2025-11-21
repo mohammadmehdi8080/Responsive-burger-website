@@ -38,7 +38,12 @@ sr.reveal(".home-potato-1" , { origin: 'top', distance: '120px', delay: 1000, du
 sr.reveal(".home-potato-2" , { origin: 'top', distance: '120px', delay: 800, duration: 2500 })
 sr.reveal(".home-tomato-1" , { origin: 'top', distance: '120px', delay: 1000, duration: 2500 })
 sr.reveal(".home-tomato-2" , { origin: 'top', distance: '120px', delay: 800, duration: 2500 })
-sr.reveal(".section__title" , { origin: 'top', distance: '120px', delay: 1000, duration: 2000 })
+sr.reveal(".section__title" , { origin: 'top', distance: '120px', delay: 400, duration: 2000 })
 sr.reveal(".recipe__image" , { origin: 'left', distance: '120px', delay: 1000, duration: 2000 })
 sr.reveal(".recipe__content" , { origin: 'right', distance: '120px', delay: 1000, duration: 2000 })
 sr.reveal(".popular__card" , { origin: 'top', distance: '120px', delay: 1000, duration: 2000 })
+sr.reveal(".delivery__content" , { origin: 'right', distance: '120px', delay: 1000, duration: 2000 })
+sr.reveal(".delivery__img__wrapper" , { origin: 'left', distance: '120px', delay: 1000, duration: 2000 })
+sr.reveal(".contact__img" , { origin: 'left', distance: '120px', delay: 600, duration: 2000 })
+sr.reveal(".contact__info" , { origin: 'bottom', distance: '120px', delay: 600, duration: 2000 })
+

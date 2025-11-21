@@ -67,6 +67,8 @@ button{
 }
 svg{
   width: 3rem;
+  stroke: var(--first-color);
+  stroke-width: 1px ;
 }
 /*=============== BASE ===============*/
 
@@ -433,7 +435,7 @@ body{
   width: 4rem;
 }
 .delivery-burger{
-  width: 50vw;
+  width: 46vw;
   margin: 0 auto;
 }
 .delivery__img__wrapper{
@@ -496,7 +498,28 @@ body{
 }
 
 /*=============== FOOTER ===============*/
+.footer{
+  padding: 3rem;
+  text-align: center;
+}
+.footer__logo{
 
+}
+.footer__container{
+
+}
+.footer__link{
+  font-size: 2rem;
+  color: var(--text-color);
+}
+.footer__social{
+  gap: 2rem;
+  fill: var(--first-color);
+}
+.footer_copy{
+  font-size: 1.5rem;
+  margin-top: 4rem;
+}
 
 /*=============== SCROLL BAR ===============*/
 
@@ -504,7 +527,6 @@ body{
 /*=============== SCROLL UP ===============*/
 
 
-/* Show Scroll Up */
 
 
 /*=============== BREAKPOINTS ===============*/
@@ -632,10 +654,10 @@ body{
     width: 100%;
   }
   .contact__soda , .left__contact__svg{
-    width: 10vw;
+    width: 3rem;
   }
   .contact__soda{
-    right: 0;
+    right: -3vw;
     bottom: -2rem;
   }
   .contact__img{
@@ -645,6 +667,19 @@ body{
     font-size: 1.8rem ;
   }
   .contact__info p{
+    font-size: 1rem;
+  }
+  .footer__container{
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .footer__social{
+    margin-right: 0;
+  }
+  .footer__link{
+    font-size: 1.7rem;
+  }
+  .footer_copy{
     font-size: 1rem;
   }
 }
