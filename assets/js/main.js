@@ -1,10 +1,12 @@
 /*=============== SHOW MENU ===============*/
 const menu__toggle = document.querySelector("#menu__toggle")
 const mobile__menu = document.querySelector(".mobile__menu")
+const body = document.querySelector("body")
 let flag = false
 menu__toggle.addEventListener("click" , ()=>{
     mobile__menu.classList.toggle("open")
     menu__toggle.classList.toggle("open")
+    body.classList.toggle("overFlow")
 })
 
 /*=============== REMOVE MENU MOBILE ===============*/
@@ -46,4 +48,5 @@ sr.reveal(".delivery__content" , { origin: 'right', distance: '120px', delay: 10
 sr.reveal(".delivery__img__wrapper" , { origin: 'left', distance: '120px', delay: 1000, duration: 2000 })
 sr.reveal(".contact__img" , { origin: 'left', distance: '120px', delay: 600, duration: 2000 })
 sr.reveal(".contact__info" , { origin: 'bottom', distance: '120px', delay: 600, duration: 2000 })
+sr.reveal(".footer__container" , { origin: 'bottom', distance: '120px', delay: 600, duration: 2000 })
 

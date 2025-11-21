@@ -2,6 +2,7 @@
 @font-face {
   font-family: "Aclonica";
   src: url("../font/Aclonica-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 
@@ -81,6 +82,9 @@ body{
   font-family: "Aclonica" , sans-serif;
   background-color: var(--body-color);
   overflow-x: hidden ;
+}
+.overFlow{
+   overflow: hidden;
 }
 
 /*=============== VARIABLES CSS ===============*/
@@ -188,13 +192,15 @@ body{
   z-index: 250;
   cursor: pointer;
   transition: all 300ms ease-in-out;
+  background-color: transparent;
+  padding: 0;
 }
 .menu__toggle.open{
   transform: rotate(135deg);
 }
 .mobile__menu{
   position: absolute;
-  top: -50%;
+  top: -80%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
