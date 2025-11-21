@@ -1,13 +1,16 @@
 /*=============== SHOW MENU ===============*/
-const menu__toggle = document.querySelector("#menu__toggle")
-const mobile__menu = document.querySelector(".mobile__menu")
-const body = document.querySelector("body")
-let flag = false
-menu__toggle.addEventListener("click" , ()=>{
-    mobile__menu.classList.toggle("open")
-    menu__toggle.classList.toggle("open")
-    body.classList.toggle("overFlow")
-})
+const menu__toggle = document.querySelector("#menu__toggle");
+const mobile__menu = document.querySelector(".mobile__menu");
+
+if (menu__toggle && mobile__menu) {
+  menu__toggle.addEventListener("click", () => {
+    mobile__menu.classList.toggle("open");
+    menu__toggle.classList.toggle("open");
+  });
+} else {
+
+}
+
 
 /*=============== REMOVE MENU MOBILE ===============*/
 
