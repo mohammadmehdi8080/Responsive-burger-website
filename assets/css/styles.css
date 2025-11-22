@@ -367,13 +367,19 @@ body {
 
 .home-burger {
    max-width: 450px;
+   width: 100%;
+   height: auto;
    position: relative;
    z-index: 3;
+   object-fit: contain;
 }
 
 .home-dish {
    max-width: 500px;
+   width: 100%;
+   height: auto;
    margin-top: -5rem;
+   object-fit: contain;
 }
 
 .home-lettuce-1 {
@@ -434,7 +440,16 @@ body {
    justify-items: center;
 }
 
-.recipe__image {}
+.recipe__image {
+   width: 100%;
+   max-width: 50rem;
+}
+
+.recipe__image img {
+   width: 100%;
+   height: auto;
+   object-fit: contain;
+}
 
 .recipe__content {
    width: 60%;
@@ -502,9 +517,12 @@ body {
 
 .popular__card__img {
    width: 25rem;
+   max-width: 100%;
+   height: auto;
    margin-top: -8rem;
    margin-left: 1.5rem;
    box-shadow: var(--shadow-small-img);
+   object-fit: contain;
 }
 
 .popular__card__title {
@@ -568,8 +586,11 @@ body {
 }
 
 .delivery-burger {
-   width: 46vw;
+   width: 100%;
+   max-width: 50rem;
+   height: auto;
    margin: 0 auto;
+   object-fit: contain;
 }
 
 .delivery__img__wrapper {
@@ -600,7 +621,10 @@ body {
 }
 
 .contact__img {
-   width: 45rem;
+   width: 100%;
+   max-width: 45rem;
+   height: auto;
+   object-fit: contain;
 }
 
 .contact__right__content {
@@ -703,9 +727,14 @@ body {
       justify-self: end;
    }
 
-   .recipe__image img {
+   .recipe__image {
       max-width: 40rem;
       width: 60vw;
+   }
+
+   .recipe__image img {
+      width: 100%;
+      height: auto;
    }
 
    .delivery__container {
@@ -749,12 +778,14 @@ body {
    }
 
    .home-burger {
-      width: 80%;
+      max-width: 80%;
+      width: 100%;
       margin: 0 auto;
    }
 
    .home-dish {
-      width: 82%;
+      max-width: 82%;
+      width: 100%;
       margin-left: auto;
       margin-right: auto;
    }
@@ -810,7 +841,9 @@ body {
    }
 
    .popular__card__img {
-      width: 55vw;
+      width: 100%;
+      max-width: 55vw;
+      height: auto;
    }
 
    .popular__card__title {
@@ -828,6 +861,7 @@ body {
 
    .delivery-burger {
       width: 100%;
+      max-width: 100%;
    }
 
    .contact__soda,
