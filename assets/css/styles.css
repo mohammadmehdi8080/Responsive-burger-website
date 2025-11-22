@@ -173,6 +173,7 @@ body {
    font-family: "Aclonica", sans-serif;
    background-color: var(--body-color);
    overflow-x: hidden;
+   padding-top: 8rem;
 }
 
 .overFlow {
@@ -228,7 +229,20 @@ body {
 }
 
 /*=============== HEADER & NAV ===============*/
-.header {}
+.header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: var(--body-color);
+   z-index: 100;
+   transition: box-shadow 0.3s ease-in-out;
+   padding-bottom: 1rem;
+}
+
+.header.scroll-header {
+   box-shadow: 0 2px 16px hsla(22, 100%, 8%, 0.15);
+}
 
 .header__nav {
    padding-top: 2rem;
@@ -863,28 +877,49 @@ body {
       background-color: transparent;
       padding: 0;
       display: block;
+      width: 3rem;
+      height: 3rem;
    }
 
    .mobile__menu {
       display: flex;
-      position: absolute;
-      top: -80%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100dvw;
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
       height: 35rem;
-      padding: 6rem 0;
+      padding: 8rem 0 4rem;
       background-color: var(--body-color-alt);
       flex-direction: column;
-      box-shadow: 0 0 10px rgb(0 0 0 / 40%);
-      transition: all 300ms ease-in-out;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 3rem;
+      box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+      transition: top 300ms ease-in-out;
       z-index: 200;
+      overflow-y: auto;
+   }
+
+   .mobile__menu .header__menu__link {
+      font-size: 2rem;
+      color: var(--title-color);
+      padding: 1rem 2rem;
+      transition: color 200ms ease-in-out;
+   }
+
+   .mobile__menu .header__menu__link:hover {
+      color: var(--first-color);
    }
 
    .menu__toggle.open {
       transform: rotate(135deg);
    }
-   .mobile__menu.open{
+
+   .mobile__menu.open {
       top: 0;
+   }
+
+   body.menu-open {
+      overflow: hidden;
    }
 }
